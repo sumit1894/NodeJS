@@ -15,6 +15,5 @@ const resolvePath=path.resolve(filePath)
 const extname=path.extname(filePath)
 const basename=path.basename(filePath)
 const dirname=path.dirname(filePath)
-// const seps=path.sep(filePath)
 
-console.log({parseData,resolvePath,extname,basename,dirname});
+console.log({parseData,resolvePath,extname,basename,dirname,separator:path.sep});
