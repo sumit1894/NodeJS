@@ -1,7 +1,6 @@
 
 //* Import EventEmitter class
 const EventEmitter= require("events");
-const { emit } = require("process");
 
 
 //* Create an instance of EventEmitter
