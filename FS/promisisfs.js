@@ -1,9 +1,17 @@
-const fs = require("fs");
+// const fs = require("fs");
 const path = require("path");
 
 
 const fileName = "fspromisis.txt";
 const filepath = path.join(__dirname, fileName);
+
+//! are you tired of using fs.promisis  everytime?
+//* you can actually just import with fs/promises
+//* const fs=required("fs/promisis")
+//* now, you don't need to use fs.promisis everytime
+
+const fs = require("fs/promises");
+
 
 
 
@@ -51,15 +59,15 @@ fs.promises
 
 //*----------------------------------------------------------------------------------------------
 
-fs.promises
+fs
     .writeFile(filepath, "this is initial data", "utf-8")
     .then(() => {
         console.log("file created successfully!")
     })
     .catch((err) => { console.log(err) });
 
-*/
 
+*/
 
 //todo ReadFile
 
@@ -124,7 +132,7 @@ fs.promises
 
 //*----------------------------------------------------------------------------------------------
 //!  synatx: fs.promisis.unlink(path).then().catch();
-//? path: path to hte file 
+//? path: path to hte file
 //*----------------------------------------------------------------------------------------------
 
 fs.promises.unlink(filepath).then(console.log("file Delete Successfully")).catch((err)=>{
@@ -132,6 +140,9 @@ fs.promises.unlink(filepath).then(console.log("file Delete Successfully")).catch
 })
 
 */
+
+
+
 
 
 
