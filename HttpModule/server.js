@@ -21,7 +21,7 @@ const http=require("http");
 //todo createServer
 const server=http.createServer((req,res)=>{
     if(req.url==="/"){
-        res.setHeader("Content-Type","text/html")
+        res.setHeader("Content-Type","text/html1")
         res.write("<h1>I am sumit prasad</h1>");
         res.end();
     }
