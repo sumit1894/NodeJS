@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/sumit1894/NodeJS/issues"
   },
-  "homepage": "https://github.com/sumit1894/NodeJS#readme",
-  "dependencies": {
-    "nodemon": "^3.1.10"
-  }
+  "homepage": "https://github.com/sumit1894/NodeJS#readme"
 }
