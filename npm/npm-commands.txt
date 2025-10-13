@@ -1,0 +1,148 @@
+🔹 What is npm?
+
+npm is a CLI tool (Command Line Interface) that comes with Node.js.
+It’s used to install, update, and remove external Node.js packages (libraries).
+You can also create and publish your own packages to npmjs.com (the npm registry).
+
+
+Don’t confuse:
+
+npm → the tool/command line
+npmjs.com → the online registry where packages are stored
+
+
+
+Fun Facts:
+"npm" should be lowercase.
+It does not mean “Node Package Manager” — it’s a recursive bacronym:
+👉 “npm is not an acronym”.
+
+
+
+
+📦 npm Basics
+Command	Meaning
+npm init	Initialize a Node.js project (creates package.json)
+npm install <package> or npm i <package>	Install a package locally
+npm install	Reinstall all packages from package.json
+npm remove <package>	Uninstall a package
+npm list	Show installed packages and versions
+npm view <package>	Show info about a package
+npm view <package> version	Show current version
+npm view <package> versions	Show all available versions
+npm outdated	Show outdated packages
+npm update	Update packages (within defined version range)
+
+
+
+
+
+⚙️ Important Files
+File	Purpose
+node_modules/	Contains all installed packages (very large folder — ignore in Git)
+package.json	Project info + dependencies list
+package-lock.json	Exact versions of installed packages (to prevent breaking changes)
+
+👉 Always add node_modules/ and package-lock.json in your .gitignore file.
+
+
+
+
+
+🧮 Semantic Versioning (SemVer)
+
+Version format → MAJOR.MINOR.PATCH
+
+Example: 4.17.1
+
+4 = Major → big breaking changes
+17 = Minor → new features (no breaking)
+1 = Patch → small fixes
+
+
+
+
+
+🔢 Symbols in Versions
+
+Symbol	Meaning	Example	Installs up to
+^	Allow minor + patch updates	^4.17.1	4.18.0 ✅ not 5.0.0 ❌
+~	Allow patch updates only	~4.17.1	4.17.2 ✅ not 4.18.0 ❌
+(none)	Exact version	4.17.1	Only 4.17.1
+>	Greater than	>4.17.1	4.18.0, 5.0.0
+<	Less than	<4.17.1	4.16.0
+>=	Greater or equal	>=4.17.1	4.17.1, 5.0.0
+<=	Less or equal	<=4.17.1	4.16.0, 4.17.1
+*	Any version	*	All versions
+x	Wildcard	4.x	4.16.0, 4.18.1
+
+💡 ^4.17.1 ≈ 4.x and ~4.17.1 ≈ 4.17.x
+
+
+
+
+
+
+
+🌐 Global Packages
+By default, packages install locally (inside your project).
+To install a global package (usable anywhere):
+npm install -g <package-name>
+
+
+
+
+Example:
+
+npm install -g npm-check-updates
+On Linux/Mac, prefix with sudo if needed.
+Check global outdated packages:
+npm outdated -g
+
+
+
+Update or remove global packages:
+
+npm update -g <package-name>
+npm remove -g <package-name>
+
+⚡ npx Command
+
+npx runs packages without installing them globally.
+Comes bundled with npm.
+
+
+
+Example:
+
+npx nodemon server.js
+npx npm-check-updates
+
+
+
+
+
+🧰 Extra Notes
+
+Use npm-check-updates to update all packages to the latest versions:
+npx npm-check-updates -u
+npm install
+npm itself is a global package, so to update npm:
+npm install -g npm
+
+
+
+
+
+
+🧾 In Short
+Topic	Key Point
+npm:-	CLI tool for managing Node packages
+npmjs.com:-	Online registry for packages
+node_modules:-	Contains installed packages
+package.json:-	Project + dependency info
+package-lock.json:-	Exact dependency versions
+SemVer:-	Major.Minor.Patch system
+^ and ~	Allow auto-updates to safe versions
+npx	Runs packages temporarily
+-g	Installs globally
