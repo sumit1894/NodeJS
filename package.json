@@ -1,0 +1,22 @@
+{
+  "name": "node-js",
+  "version": "1.0.0",
+  "description": "Node js and Express js Series",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumit1894/NodeJS.git"
+  },
+  "author": "Sumit Prasad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumit1894/NodeJS/issues"
+  },
+  "homepage": "https://github.com/sumit1894/NodeJS#readme",
+  "dependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
