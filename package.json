@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sumit1894/NodeJS/issues"
   },
-  "homepage": "https://github.com/sumit1894/NodeJS#readme"
+  "homepage": "https://github.com/sumit1894/NodeJS#readme",
+  "dependencies": {
+    "chalk": "^5.6.2"
+  }
 }
