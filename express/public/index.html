@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,40 @@
 </head>
 
 <body>
+
+    <!-- //todo4 absolute path for static folder,to run html and css without res.send -->
+
+    <!-- 
     <div>
         <h1>Never loose the hope</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, numquam!</p>
         <a href="">Lorem, ipsum dolor 1.</a>
     </div>
 
+     -->
+
+
+    <!--todo  GET & POST Methods -->
+
+    <!--* By default, form tag sends Get request to the action. it will end as query parameters  -->
+
+
+    <h1>Home Page</h1>
+
+    <form action="/contact" method="post">
+        <div>
+            <label for="name">Name: </label>
+            <!-- <input type="text" name="name" id="name"> --> <!--! app.use(express.urlencoded())-->
+            <input type="text" name="user[name]" id="name"> <!--! app.use(express.urlencoded({extended:true}))-->
+        </div>
+        <div>
+            <label for="message">Message: </label>
+            <!-- <textarea name="message" id="message" placeholder="Write your message here"></textarea> -->
+            <textarea name="user[message]" id="message" placeholder="Write your message here"></textarea>
+        </div>
+        <button>Submit</button>
+    </form>
 
 </body>
+
 </html>
