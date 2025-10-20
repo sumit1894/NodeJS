@@ -1,6 +1,6 @@
 
 
-import { createReadStream, createWriteStream, read } from "fs";
+import { createReadStream, createWriteStream} from "fs";
 import path from "path";
 
 const inputFilePath = path.join(import.meta.dirname, "input.txt");
